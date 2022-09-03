@@ -59,12 +59,6 @@ const Login = () => {
           loginSuccess={loginSuccess}
           error={error}
         />
-        <div>
-          Don't have an account?
-          <div className="uppercase font-bold text-primary hover:text-secondary">
-            Sign up
-          </div>
-        </div>
         {/* loginSuccess state: {JSON.stringify(loginSuccess)}
         <br />
         error state: {JSON.stringify(error)} */}
