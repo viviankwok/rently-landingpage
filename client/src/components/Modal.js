@@ -22,7 +22,7 @@ const Modal = (props) => {
         {/* BUTTON */}
         <label
           for="my-modal"
-          className="btn modal-open w-56 my-3 bg-accent hover:bg-primary"
+          className="btn modal-open w-56 my-3 bg-accent border-none hover:bg-primary"
           onClick={() => props.handleSignIn()}
         >
           sign in

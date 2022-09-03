@@ -87,7 +87,7 @@ const ModalRegister = () => {
             </div>
 
             <label
-              className="btn bg-primary hover:bg-secondary"
+              className="btn bg-primary border-none hover:bg-secondary"
               onClick={handleRegister}
             >
               create account
