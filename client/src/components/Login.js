@@ -3,6 +3,7 @@ import LoginForm from "./LoginForm";
 import userData from "../data/userData";
 import Modal from "./Modal";
 import ReactContext from "../context/react.context";
+import ModalRegister from "./ModalRegister";
 
 const Login = () => {
   const initForm = {
@@ -59,6 +60,8 @@ const Login = () => {
           loginSuccess={loginSuccess}
           error={error}
         />
+        <div>Don't have an account?</div>
+        <ModalRegister />
         {/* loginSuccess state: {JSON.stringify(loginSuccess)}
         <br />
         error state: {JSON.stringify(error)} */}
