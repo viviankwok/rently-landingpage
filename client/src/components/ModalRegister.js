@@ -12,17 +12,33 @@ const ModalRegister = () => {
   };
 
   const [regFormData, setRegFormData] = useState(initRegForm);
+  const [regStatus, setRegStatus] = useState("");
 
   const handleRegister = () => {
     console.log("create account btn clicked");
-    userData.push(regFormData);
-    console.log(userData);
+
+    // check if user exists
+    let user = userData.find(
+      (user) => user.phoneNumber == regFormData.phoneNumber
+    );
+
+    // if unique email
+    if (user === undefined) {
+      console.log("new/unique user");
+      setRegStatus("new user");
+      userData.push(regFormData);
+      console.log(userData);
+    } else {
+      // if user exists
+      setRegStatus("user exists");
+    }
     setRegFormData(initRegForm);
   };
 
   const handleExitReg = () => {
     console.log("exit reg icon clicked");
     setRegFormData(initRegForm);
+    setRegStatus("");
   };
 
   return (
@@ -55,7 +71,20 @@ const ModalRegister = () => {
             />
           </p>
           <div className="modal-action">
-            <label for="my-modal-2" className="btn" onClick={handleRegister}>
+            {/* ERROR MESSAGES */}
+            <div>
+              {regStatus === "user exists" ? (
+                <p className="text-error font-bold">
+                  This phone number has been taken.
+                </p>
+              ) : regStatus === "new user" ? (
+                <p className="text-success font-bold">Account created.</p>
+              ) : (
+                ""
+              )}
+            </div>
+
+            <label className="btn" onClick={handleRegister}>
               create account
             </label>
           </div>
