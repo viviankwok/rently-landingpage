@@ -1,11 +1,11 @@
-import Child from "./components/Child";
+import Login from "./components/Login";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-blue-200">
       App component
-      <Child />
-      <button class="btn btn-success">testing</button>
+      <div className="text-6xl logo">Rently</div>
+      <Login />
     </div>
   );
 }
