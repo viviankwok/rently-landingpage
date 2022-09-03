@@ -14,8 +14,7 @@ const LoginForm = (props) => {
   };
 
   return (
-    <div className="bg-rose-200">
-      LoginForm component
+    <div className="flex justify-center">
       <form className="login-form">
         {/* INPUT - PHONE NUMBER */}
 
@@ -24,7 +23,7 @@ const LoginForm = (props) => {
         </label>
         <input
           type="number"
-          className="input input-bordered w-full max-w-xs"
+          className="input input-bordered w-96 max-w-xs"
           onChange={handlePhoneChange}
           value={props.formData.phoneNumber}
         />
@@ -35,7 +34,7 @@ const LoginForm = (props) => {
         </label>
         <input
           type="text"
-          className="input input-bordered w-full max-w-xs"
+          className="input input-bordered w-96 max-w-xs"
           onChange={handlePasswordChange}
           value={props.formData.password}
         />

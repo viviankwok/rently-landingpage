@@ -9,23 +9,25 @@ const Modal = (props) => {
     reactCtx.reset();
   };
   return (
-    <div className="bg-green-200">
+    <div className="flex justify-center">
       {/* VALIDATION MESSAGES */}
-      <div>
-        {props.error === "user not found"
-          ? "Enter a valid phone number."
-          : props.error === "password mismatch"
-          ? "Enter a valid password"
-          : ""}
+      <div className="mt-2">
+        {props.error === "user not found" ? (
+          <p className="text-error font-bold">Enter a valid phone number.</p>
+        ) : props.error === "password mismatch" ? (
+          <p className="text-error font-bold">Enter a valid password.</p>
+        ) : (
+          " "
+        )}
+        {/* BUTTON */}
+        <label
+          for="my-modal"
+          className="btn modal-open w-56 my-3 bg-accent hover:bg-primary"
+          onClick={() => props.handleSignIn()}
+        >
+          sign in
+        </label>{" "}
       </div>
-      {/* BUTTON */}
-      <label
-        for="my-modal"
-        className="btn modal-open"
-        onClick={() => props.handleSignIn()}
-      >
-        sign in
-      </label>
       {/* MODAL */}
       <input type="checkbox" id="my-modal" className="modal-toggle" />
       {props.loginSuccess ? (

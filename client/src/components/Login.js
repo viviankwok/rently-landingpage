@@ -51,16 +51,15 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-yellow-200">
+    <div>
       <ReactContext.Provider value={{ reset }}>
-        Login component
         <LoginForm formData={formData} setFormData={setFormData} />
         <Modal
           handleSignIn={handleSignIn}
           loginSuccess={loginSuccess}
           error={error}
         />
-        <div>Don't have an account?</div>
+        <div className="flex justify-center">Don't have an account?</div>
         <ModalRegister />
         {/* loginSuccess state: {JSON.stringify(loginSuccess)}
         <br />

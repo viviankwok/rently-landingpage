@@ -44,12 +44,14 @@ const ModalRegister = () => {
   return (
     <div>
       {/* BUTTON  */}
-      <label
-        for="my-modal-2"
-        className="modal-button font-bold uppercase text-primary hover:text-secondary "
-      >
-        sign up
-      </label>
+      <div className="flex justify-center">
+        <label
+          for="my-modal-2"
+          className="modal-button font-bold uppercase text-primary hover:text-secondary "
+        >
+          sign up
+        </label>
+      </div>
 
       {/* MODAL */}
       <input type="checkbox" id="my-modal-2" className="modal-toggle" />
@@ -57,13 +59,13 @@ const ModalRegister = () => {
         <div className="modal-box">
           <label
             for="my-modal-2"
-            className="btn btn-sm btn-circle absolute right-2 top-2"
+            className="btn btn-sm btn-circle absolute right-2 top-2 hover:bg-secondary"
             onClick={handleExitReg}
           >
             ✕
           </label>
 
-          <h3 className="font-bold text-lg">Sign Up</h3>
+          <h3 className="font-bold text-4xl flex justify-center">Sign Up</h3>
           <p className="py-4">
             <RegForm
               regFormData={regFormData}
@@ -84,7 +86,10 @@ const ModalRegister = () => {
               )}
             </div>
 
-            <label className="btn" onClick={handleRegister}>
+            <label
+              className="btn bg-primary hover:bg-secondary"
+              onClick={handleRegister}
+            >
               create account
             </label>
           </div>

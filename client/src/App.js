@@ -2,9 +2,8 @@ import Login from "./components/Login";
 
 function App() {
   return (
-    <div className="App bg-blue-200">
-      App component
-      <div className="text-6xl logo">Rently</div>
+    <div className="App h-screen ">
+      <div className="text-8xl logo flex justify-center pt-10">Rently</div>
       <Login />
     </div>
   );
