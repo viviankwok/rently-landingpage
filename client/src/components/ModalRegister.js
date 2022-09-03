@@ -72,20 +72,20 @@ const ModalRegister = () => {
               setRegFormData={setRegFormData}
             />
           </p>
-          <div className="modal-action">
-            {/* ERROR MESSAGES */}
-            <div>
-              {regStatus === "user exists" ? (
-                <p className="text-error font-bold">
-                  This phone number has been taken.
-                </p>
-              ) : regStatus === "new user" ? (
-                <p className="text-success font-bold">Account created.</p>
-              ) : (
-                ""
-              )}
-            </div>
 
+          {/* ERROR MESSAGES */}
+          <div>
+            {regStatus === "user exists" ? (
+              <p className="text-error font-bold">
+                This phone number has been taken.
+              </p>
+            ) : regStatus === "new user" ? (
+              <p className="text-success font-bold">Account created.</p>
+            ) : (
+              ""
+            )}
+          </div>
+          <div className="modal-action">
             <label
               className="btn bg-primary border-none hover:bg-secondary"
               onClick={handleRegister}

@@ -33,7 +33,7 @@ const LoginForm = (props) => {
           <span className="label-text">Password</span>
         </label>
         <input
-          type="text"
+          type="password"
           className="input input-bordered w-96 max-w-xs"
           onChange={handlePasswordChange}
           value={props.formData.password}

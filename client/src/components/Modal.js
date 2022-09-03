@@ -40,7 +40,7 @@ const Modal = (props) => {
             <div className="modal-action">
               <label
                 for="my-modal"
-                className="btn"
+                className="btn bg-primary border-none hover:bg-secondary"
                 onClick={() => handleSignOut()}
               >
                 Sign Out
